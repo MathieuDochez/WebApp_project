@@ -1,0 +1,21 @@
+﻿@using Contentful.Core.Models
+
+@model ContentfulCollection<WebContent>
+
+@{
+    ViewData["Title"] = "Web Page";
+}
+
+<h1> Web page about my favourite animals.</h1>
+
+@foreach (var content in Model)
+{
+    <h2>@content.Title</h2>
+    <p>@content.content</p>
+    <p>source: @content.Source</p>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
